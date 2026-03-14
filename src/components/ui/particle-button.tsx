@@ -69,6 +69,12 @@ function ParticleButton({
         setTimeout(() => {
             setShowParticles(false);
         }, successDuration);
+
+        // We want to pass the event properly if the signature fits, 
+        // but simple onClick() is safer if type conflicts occur with BaseUIEvent
+        if (onClick) {
+            (onClick as any)(e);
+        }
     };
 
     return (

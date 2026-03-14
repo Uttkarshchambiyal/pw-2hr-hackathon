@@ -6,31 +6,32 @@ import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import { ScrollFrameAnimation } from "@/components/ui/scroll-frame-animation";
 import { FlipWords } from "@/components/ui/flip-words";
 import MusicArtwork from "@/components/ui/music-artwork";
+import EarbudShowcase from "@/components/ui/spatial-product-showcase";
 import { ParticleButton } from "@/components/ui/particle-button";
-import { CreativePricing, type PricingTier } from "@/components/ui/creative-pricing";
+import { ModernPricingPage, type PricingCardProps } from "@/components/ui/animated-glassy-pricing";
 import { GlowingFeatures } from "@/components/ui/glowing-features";
 import { Headphones, Speaker, Star, Zap } from "lucide-react";
 
-const audioTiers: PricingTier[] = [
+const audioTiers: PricingCardProps[] = [
   {
-    name: "Essential",
-    icon: <Headphones className="w-6 h-6 text-zinc-900 dark:text-white" />,
-    price: 4999,
+    planName: "Essential",
     description: "Perfect for daily commuters and casual listening",
-    color: "amber",
+    price: "4,999",
+    currencySymbol: "₹",
     features: [
       "Active Noise Cancellation",
       "24-hour Battery Life",
       "Water Resistant (IPX4)",
       "1-Year Warranty",
     ],
+    buttonText: "Buy Essential",
+    buttonVariant: "secondary"
   },
   {
-    name: "Pro Studio",
-    icon: <Star className="w-6 h-6 text-zinc-900 dark:text-white" />,
-    price: 12999,
+    planName: "Pro Studio",
     description: "For audiophiles and professional creators",
-    color: "blue",
+    price: "12,999",
+    currencySymbol: "₹",
     features: [
       "Hi-Res Lossless Audio",
       "Spatial Audio Support",
@@ -38,14 +39,15 @@ const audioTiers: PricingTier[] = [
       "Premium Memory Foam",
       "2-Year Warranty",
     ],
-    popular: true,
+    isPopular: true,
+    buttonText: "Buy Pro Studio",
+    buttonVariant: "primary"
   },
   {
-    name: "Ultimate",
-    icon: <Zap className="w-6 h-6 text-zinc-900 dark:text-white" />,
-    price: 24999,
+    planName: "Ultimate",
     description: "The peak of wireless audio technology",
-    color: "purple",
+    price: "24,999",
+    currencySymbol: "₹",
     features: [
       "Studio-Grade Drivers",
       "Adaptive ANC 3.0",
@@ -53,15 +55,18 @@ const audioTiers: PricingTier[] = [
       "Real-time Translation",
       "Lifetime Support",
     ],
+    buttonText: "Buy Ultimate",
+    buttonVariant: "primary"
   },
 ];
 
 export default function Home() {
   const [showPricing, setShowPricing] = useState(false);
+  const [showShowcase, setShowShowcase] = useState(false);
 
   const handlePrimaryClick = () => {
-    console.log('Shop Headphones clicked!');
-    setShowPricing(true);
+    console.log('See Details clicked!');
+    setShowShowcase(true);
   };
 
   const handleSecondaryClick = () => {
@@ -73,12 +78,25 @@ export default function Home() {
 
   if (showPricing) {
     return (
-      <main className="min-h-screen bg-black">
-        <CreativePricing
-          tiers={audioTiers}
+      <main className="min-h-screen bg-black overflow-x-hidden">
+        <ModernPricingPage
+          title={
+            <>
+              Find the <span className="text-cyan-400">Perfect Gear</span> for Your Lifestyle
+            </>
+          }
+          subtitle="From essential listening to studio-grade immersion. Step into the future of sound today."
+          plans={audioTiers}
+          showAnimatedBackground={true}
           onBack={() => setShowPricing(false)}
         />
       </main>
+    )
+  }
+
+  if (showShowcase) {
+    return (
+      <EarbudShowcase onBack={() => setShowShowcase(false)} />
     )
   }
 
@@ -99,7 +117,7 @@ export default function Home() {
         subtitle="Explore our elite collection of headphones, earbuds, and speakers crafted for audio perfection."
         buttons={{
           primary: {
-            text: "Shop Headphones",
+            text: "See Details",
             onClick: handlePrimaryClick
           },
           secondary: {
@@ -161,7 +179,10 @@ export default function Home() {
               />
               <p className="text-neutral-300 font-semibold text-lg mt-4">Earbuds</p>
               <p className="text-neutral-500 text-sm mb-4">Wireless Freedom</p>
-              <ParticleButton className="w-full mt-2" variant="default" onClick={() => setShowPricing(true)}>
+              <ParticleButton className="w-full mt-2" variant="default" onClick={() => {
+                 console.log("ParticleButton clicked");
+                 setShowPricing(true);
+              }}>
                 Click to buy
               </ParticleButton>
             </div>
@@ -175,7 +196,10 @@ export default function Home() {
               />
               <p className="text-neutral-300 font-semibold text-lg mt-4">Headphones</p>
               <p className="text-neutral-500 text-sm mb-4">Studio-Grade Sound</p>
-              <ParticleButton className="w-full mt-2" variant="default" onClick={() => setShowPricing(true)}>
+              <ParticleButton className="w-full mt-2" variant="default" onClick={() => {
+                 console.log("ParticleButton clicked");
+                 setShowPricing(true);
+              }}>
                 Click to buy
               </ParticleButton>
             </div>
@@ -189,7 +213,10 @@ export default function Home() {
               />
               <p className="text-neutral-300 font-semibold text-lg mt-4">BT Speaker</p>
               <p className="text-neutral-500 text-sm mb-4">Portable Power</p>
-              <ParticleButton className="w-full mt-2" variant="default" onClick={() => setShowPricing(true)}>
+              <ParticleButton className="w-full mt-2" variant="default" onClick={() => {
+                 console.log("ParticleButton clicked");
+                 setShowPricing(true);
+              }}>
                 Click to buy
               </ParticleButton>
             </div>
