@@ -1,10 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+PW 2‑Hour Hackathon – Spatial Product Showcase & Glassmorphism Pricing
+A Next.js 14 project built in a 2‑hour PW hackathon featuring an interactive spatial product showcase and an animated glassy pricing section, fully responsive and deployed on Vercel.
+​
 
-## Getting Started
+Live demo: https://pw-2hr-hackathon.vercel.app/
+​
 
-First, run the development server:
+Features
+Next.js App Router with TypeScript and modern file‑based routing.
+​
 
-```bash
+Spatial product showcase layout highlighting multiple product cards with smooth hover effects and transitions.
+
+Animated glassmorphism pricing section (blurred background, frosted glass panels, subtle gradients and shadows).
+
+Responsive UI optimized for desktop and mobile.
+
+Clean component structure in the src directory and assets served from public.
+​
+
+Tech Stack
+Next.js 14 (App Router)
+​
+
+TypeScript
+​
+
+CSS modules / global CSS for styling
+​
+
+Deployed on Vercel
+​
+
+Getting Started
+Clone the repository:
+
+bash
+git clone https://github.com/Uttkarshchambiyal/pw-2hr-hackathon.git
+cd pw-2hr-hackathon
+Install dependencies:
+
+bash
+npm install
+# or
+yarn
+# or
+pnpm install
+# or
+bun install
+Run the development server:
+
+bash
 npm run dev
 # or
 yarn dev
@@ -12,27 +57,52 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
+Open http://localhost:3000 in your browser to see the app.
+​
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The main page is implemented in src/app/page.tsx (or app/page.tsx depending on your setup), and hot‑reload is enabled by default.
+​
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Project Structure
+text
+pw-2hr-hackathon/
+├─ public/           # Static assets (images, icons, etc.)
+├─ src/              # Application source code
+│  └─ app/           # App Router entry (pages, layout, etc.)
+├─ components.json   # UI configuration (e.g. shadcn or design tokens)
+├─ next.config.ts    # Next.js configuration
+├─ tsconfig.json     # TypeScript configuration
+├─ package.json      # Scripts and dependencies
+└─ eslint.config.mjs # Linting configuration
+You can customize the layout, animations and content by editing the components inside src (especially the main page file and any UI components created for the product and pricing sections).
+​
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Available Scripts
+In addition to dev, you can use:
 
-## Learn More
+bash
+npm run build   # Production build
+npm start       # Start production server (after build)
+npm run lint    # Run ESLint checks
+Deployment
+This project is configured for deployment on Vercel.
+​
 
-To learn more about Next.js, take a look at the following resources:
+Push to the main branch and Vercel will automatically build and deploy.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+You can also import the repo directly from Vercel’s dashboard and connect it to your GitHub account.
+​
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+For more deployment options and environment configuration, see the official Next.js docs.
+​
 
-## Deploy on Vercel
+Hackathon Notes
+This project was created under a 2‑hour time limit for a PW hackathon, focusing on:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Rapid ideation and layout design for a visually appealing product showcase.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# pw-2hr-hackathon
-# pw-2hr-hackathon
+Implementing glassmorphism, transitions, and basic interactivity within the time constraint.
+
+Clean enough structure to be extended into a full product or landing page later.
+
+
