@@ -1,7 +1,7 @@
 <!-- Banner -->
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6EE7F7,100:A78BFA&height=200&section=header&text=PW%202-Hour%20Hackathon&fontSize=48&fontColor=fff&fontAlignY=38&desc=Spatial%20Product%20Showcase%20%E2%80%A2%20Glassmorphism%20Pricing%20%E2%80%A2%20Next.js%2014&descAlignY=58&descSize=16" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=shark&color=0:FF6B35,50:F7418F,100:A855F7&height=200&section=header&text=%E2%9A%A1%20PW%202-Hour%20Hackathon&fontSize=44&fontColor=fff&fontAlignY=45&desc=Spatial%20Product%20Showcase%20%7C%20Glassmorphism%20Pricing%20%7C%20Next.js%2014&descAlignY=65&descSize=15&animation=fadeIn" width="100%" />
 
 <br/>
 
@@ -154,7 +154,7 @@ This project is licensed under the **MIT License** — feel free to use, modify 
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:A78BFA,100:6EE7F7&height=120&section=footer" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=shark&color=0:A855F7,50:F7418F,100:FF6B35&height=120&section=footer" width="100%" />
 
 **Built with ❤️ by [Uttkarsh Chambiyal](https://github.com/Uttkarshchambiyal)**
 
